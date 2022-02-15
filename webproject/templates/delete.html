@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block body %}
+<form method="post">
+  {% csrf_token %}
+  <p><b>Do you wish to delete this movie ?</b></p>
+  <button class="btn btn-danger" type="submit">Yes</button>
+  <a href="{'movieapp:display'}"><button class="btn btn-success">No</button></a>
+</form>
+{% endblock %}
